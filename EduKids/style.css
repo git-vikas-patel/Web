@@ -142,3 +142,7 @@ header{
     border-radius: 400px 0;
 }
 
+.image-container img{
+    height: 400px;
+    width: auto;
+}

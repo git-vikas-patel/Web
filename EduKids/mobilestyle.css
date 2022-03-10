@@ -1,0 +1,21 @@
+@media(max-width:800px){
+    .navbar{
+        display: none;
+    }
+    .main-btn{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        background: transparent;
+        border: none;
+        text-align: center;
+    }
+    header{
+        justify-content: space-between;
+        padding: 10px 40px;
+    }
+    .boy-image{
+        display: none;
+    }
+}

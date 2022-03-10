@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model Test</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3f72af;
+        position: relative;
+      }
+
+      button {
+        color: #bbe1fa;
+        background: #112d4e;
+        font-size: 2rem;
+        padding: 15px 30px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+      }
+
+      .model {
+        position: absolute;
+        height: 350px;
+        width: 300px;
+        background-color: #272b2e;
+        display: none;
+      }
+
+      .container > button {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .container {
+        height: 100%;
+        width: 100%;
+       
+      }
+
+      .model .image-src {
+        background: url("fingerPrint_01.png") no-repeat;
+        background-size: 300px;
+        height: 100%;
+        width: 100%;
+      }
+
+      .image-src::before {
+        content: "";
+        position: absolute;
+        background: url("fingerPrint_02.png") no-repeat;
+        background-size: 300px;
+        height: 100%;
+        width: 100%;
+        animation: animate 4s ease-in-out infinite;
+        
+      }
+      @keyframes modelsize{
+          0%{
+              height: 0;
+          }
+          100%{
+              height: 350px;
+          }
+      }
+
+      @keyframes animate{
+          0%,100%{
+              height: 0;
+          }
+          50%{
+              height: 100%;
+          }
+      }
+
+      .image-src::after{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 10px;
+          background-color: #3fefef;
+          filter: drop-shadow(5px 10px 20px #3fefef);
+          animation: animate2 4s ease-in-out infinite;
+
+      }
+      @keyframes animate2{
+          0%,100%{
+              top: 0%;
+          }
+          50%{
+              top: 100%;
+          }
+      }
+      .show{
+          display: block;
+          animation: modelsize 1s forwards;
+      }
+   
+    </style>
+  </head>
+
+  <body>
+    <button class="btn" onclick="show()">Click Me !</button>
+
+    <div class="model" id="model">
+      <div class="container">
+        <div class="image-src"></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+        const model = document.getElementById('model')
+
+        function show(){
+            model.classList.add('show')
+        }
+    </script>
+  </body>
+</html>

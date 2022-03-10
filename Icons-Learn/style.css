@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+i {
+  color: aliceblue;
+  font-size: 7rem;
+  padding: 2rem;
+  height: 7rem;
+  width: 7rem;
+  text-align: center;
+  margin: 10px;
+  background-color: rgb(46, 44, 42);
+  position: relative;
+  cursor: pointer;
+}
+i:after {
+  content: "";
+  height: 5px;
+  width: 11rem;
+  background-color: rgb(141, 165, 4);
+  position: absolute;
+  top: 0;
+  left: 0%;
+  transition: all 3s ease-in;
+}
+i:hover {
+  animation: colorchangefacebook 3s forwards;
+}
+i:nth-child(2):hover {
+  animation: colorchangeamazon 3s forwards;
+}
+i:nth-child(3):hover {
+  animation: colorchangeapple 3s forwards;
+}
+i:nth-child(4):hover {
+  animation: colorchangegoogle 3s forwards;
+}
+i:hover::after,
+i:focus::after {
+  
+  animation: scroll 3s forwards;
+}
+@keyframes scroll {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: 100%;
+  }
+}
+@keyframes colorchangefacebook {
+  0%,
+  100% {
+    color: rgb(255, 255, 255);
+  }
+  50% {
+    color: rgb(40, 40, 236);
+    background-color: rgb(197, 207, 218);
+    text-shadow: rgb(66, 80, 202) 3px 3px 7px;
+  }
+}
+@keyframes colorchangeamazon {
+  0%,
+  100% {
+    color: rgb(255, 255, 255);
+  }
+  50% {
+    color: rgb(168, 153, 11);
+    background-color: rgb(197, 207, 218);
+    text-shadow: rgb(66, 80, 202) 3px 3px 7px;
+
+  }
+}
+@keyframes colorchangeapple {
+  0%,
+  100% {
+    color: rgb(255, 255, 255);
+  }
+  50% {
+    background-color: rgb(197, 207, 218);
+    text-shadow: rgb(66, 80, 202) 3px 3px 7px;
+
+    color: rgb(0, 204, 255);
+  }
+}
+@keyframes colorchangegoogle {
+  0%,
+  100% {
+    color: rgb(255, 255, 255);
+  }
+  50% {
+    background-color: rgb(197, 207, 218);
+    text-shadow: rgb(66, 80, 202) 3px 3px 7px;
+
+    color: rgb(255, 0, 0);
+  }
+}

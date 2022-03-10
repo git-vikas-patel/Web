@@ -7,7 +7,7 @@
     <title>Edukids--- |</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobilestyle.css">
-
+    <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/0e6920a41e.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -17,7 +17,7 @@
                 <img src="icon-leaf-stem.svg" alt="icon-leaf-stem">
             </h1>
         </div>
-        <nav class="navbar">
+        <nav id="navbar" class="navbar">
             <ul class="nav-links">
                 <li class="nav-link">
                     <a href="#">About Us</a>
@@ -39,7 +39,7 @@
         <div class="enroll-btn">
 
             <button class="btn main-btn">Enroll</button>
-            <button class="hamburger"><img src="menu.png" height="50px" alt=""></button>
+            <button class="hamburger" onclick="shownav()" ><img src="menu.png" height="50px" alt=""></button>
         </div>
     </header>
     <div class="line"></div>
@@ -47,11 +47,14 @@
         <div class="boy-image">
             <img src="kid1.png" alt="">
         </div>
+        <div class="girl-image">
+            <img src="girl.png" alt="">
+        </div>
         <h2>Putting Your Kid's Child Future</h2>
         <h2>in Great Motion</h2>
         <div class="nopayment-row df">
             <span class="df"><i class="fa-solid fa-check"></i> No Credit Card</span>
-            <span class="df"><i class="fa-solid fa-check"></i>14 Free Trail</span>
+            <span class="df"><i class="fa-solid fa-check"></i>14 Days Free Trail</span>
             <span class="df"><i class="fa-solid fa-check"></i>Free For Teachers</span>
         </div>
         <button class="btn get-start">Get Started Now</button>
